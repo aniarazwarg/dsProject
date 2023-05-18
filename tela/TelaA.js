@@ -8,7 +8,7 @@ export function TelaA({navigation}) {
     <View style={{flex:1, backgroundColor:'red'}}>
         <Button
         title='Ir para tela B'
-        onPress={()=>navigation.navigate('telaB')}
+        onPress={()=>navigation.navigate('TelaB')}
 
         ></Button>
 
