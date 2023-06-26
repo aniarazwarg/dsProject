@@ -1,21 +1,33 @@
 import React from "react";
-import { View, Button, Image, StyleSheet, Text, TextInput} from "react-native";
+import { View, Button, Image, StyleSheet, Text, TextInput,Card} from "react-native";
+// import { Card } from 'react-native-elements';
 
-export function TelaB({navigation}) {
+export function TelaC({navigation}) {
     return (
         
       <View style={{JustifyContent:'center'}}>
             <View style={styles.container}>
-               <View style={{
+               {/* <View style={{
                  flexDirection: 'row',
                  height: 70,
                   padding: 40,
                 }}>
-                 <Text style={styles.text}>Welcome!</Text>
-                </View>
+                 <Text style={styles.text}>Welcome!</Text> */}
+                {/* </View> */}
                             <br></br>
-                            <Image style={styles.imagem} source={require('../assets/img1.png')}/>
+                            <Image style={styles.imagem} source={require('../assets/user.png')}/>
+                           <Text style={styles.text}>NOME</Text>
+                           <Text style={styles.text1}>email@email.com</Text>
+
                            
+                            {/* <Card>
+                                
+                                <Text style={{marginBottom: 10}}>
+                                The idea with React Native Elements is more about component structure than actual design.
+                                </Text>
+                                
+                            </Card> */}
+                            
 
                          </View>
                         
@@ -37,7 +49,7 @@ export function TelaB({navigation}) {
 
                                     <View>   
 
-                                    <Button title="Login" onPress={() => navigation.navigate('TelaC')}></Button>
+                                    <Button title="Login" onPress={() => navigation.navigate('TelaA')}></Button>
                                     
                                     </View>
 

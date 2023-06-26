@@ -6,15 +6,21 @@ export function TelaA({navigation})
     return (
     <View style={{JustifyContent:'center'}}> 
         <View style={styles.container}>
-        <View style={{
+        {/* <View style={{
                  flexDirection: 'row',
-                 height: 70,
+                 height: 50,
                   padding: 40,
                 }}>
                  <Text style={styles.text}>Welcome!</Text>
                 </View>
-                <br></br>
-                            <Image style={styles.imagem} source={require('../assets/img1.png')}/>                
+                <br></br> */}
+                           
+                <View style={{flexDirection: 'row',
+              padding: 40,}}>
+                            <Image style={styles.imagem} source={require('../assets/user.png')}/> 
+                            <Image style={styles.imagem} source={require('../assets/conecta.png')}/>             
+                            <Image style={styles.imagem} source={require('../assets/img1.png')}/> 
+                </View>
         </View>
 
             
@@ -56,8 +62,13 @@ export function TelaA({navigation})
                               
           
           
-        <View>   
+        <View style={{flexDirection: 'row',
+              justifyContent:'center',}}>   
           
+          <Button title="Login" onPress={() => navigation.navigate('TelaB')}></Button>
+          <View style={{ width: 10 }} />
+          <Text style={styles.text2}>OR</Text>
+          <View style={{ width: 10 }} />
           <Button title="Login" onPress={() => navigation.navigate('TelaB')}></Button>
                                               
         </View>
@@ -71,7 +82,7 @@ export function TelaA({navigation})
 
      const styles = StyleSheet.create({
         container: {
-         paddingTop: 50,
+         paddingTop: 0,
          backgroundColor: 'blue',
          textShadowColor: 'white',
          JustifyContent:'center',
@@ -113,9 +124,9 @@ export function TelaA({navigation})
 
       button: {        
         height: 40,
-        width:200,
-        margin: 12,
-        padding: 10,
+        width:100,
+        margin: 52,
+        padding: 40,
       }
 
     });
