@@ -4,21 +4,20 @@ import { View, Button, Image, StyleSheet, Text, TextInput} from "react-native";
 export function TelaB({navigation}) {
     return (
         
-        <View style={{JustifyContent:'center'}}>
-                        <View style={styles.container}>
-                                <View
-                                    style={{
-                                    flexDirection: 'row',
-                                    height: 70,
-                                    padding: 30,
-                                    }}>
-                                    <Text style={styles.text}>Welcome!</Text>
-                                </View>
+      <View style={{JustifyContent:'center'}}>
+            <View style={styles.container}>
+               <View style={{
+                 flexDirection: 'row',
+                 height: 70,
+                  padding: 40,
+                }}>
+                 <Text style={styles.text}>Welcome!</Text>
+                </View>
                             <br></br>
                             <Image style={styles.imagem} source={require('../assets/img1.png')}/>
                            
 
-                        </View>
+                         </View>
                         
                         <View>       
                                     <TextInput
