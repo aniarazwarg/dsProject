@@ -2,6 +2,9 @@ import React from "react";
 import { View, Button, Image, StyleSheet, Text, TextInput,Card,TouchableOpacity} from "react-native";
 // import { Card } from 'react-native-elements';
 
+
+
+
 export function TelaC({navigation}) {
     return (
         
