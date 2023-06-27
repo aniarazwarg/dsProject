@@ -65,7 +65,7 @@ export function TelaA({navigation})
         <View style={{flexDirection: 'row',
               justifyContent:'center',}}>   
           
-          <Button title="Login" onPress={() => navigation.navigate('TelaB')}></Button>
+          <Button title="Login" onPress={() => navigation.navigate('TelaD')}></Button>
           <View style={{ width: 10 }} />
           <Text style={styles.text2}>OR</Text>
           <View style={{ width: 10 }} />
