@@ -1,11 +1,39 @@
-import { View, Button, Image, StyleSheet, Text, TextInput , CheckBox} from "react-native";
+import { View, Button, Image, StyleSheet, Text, TextInput , CheckBox,Picker} from "react-native";
 import React, {useState} from 'react';
 
 export function TelaJ({navigation}) 
+
 {const [isSelected, setSelection] = useState(false);
+
+  const handleNumberChange = (itemValue) => {
+    setNumber(itemValue);
+    };
+  const [conta, setConta] = useState('');
+      
+        const handleContaChange = (itemValue) => {
+          setConta(itemValue);
+        };
+      
+        const contas = Array.from({ length: 10 }, (_, i) => i + 245);
+
+        const [number, setNumber] = useState('');
+// ---------------------------------
+
+
+
     return (
+    
+// 
     <View style={{JustifyContent:'center'}}> 
         <View style={styles.container}>
+        <View style={{
+                 flexDirection: 'row',
+                 
+                }}>
+                  <Image style={styles.imagem} source={require('../assets/telaj (2).png')}/> 
+                  <Image style={{height:100,width:80}} source={require('../assets/telaj.png')}/> 
+
+                </View>
         {/* <View style={{
                  flexDirection: 'row',
                  height: 50,
@@ -17,48 +45,61 @@ export function TelaJ({navigation})
                            
                 {/* <View style={{flexDirection: 'row',
               padding: 40,}}> */}
-                            <Image style={styles.imagem} source={require('../assets/user.png')}/> 
+                            
                            
                 </View>
         {/* </View> */}
 
             
+        <View style={{
+                         justifyContent:'space-around',padding:40}}> 
 
-        <View>
-           <text>Nome</text> 
+
+  
+
+        <View style={{ alignItems:'center'}}>
+           <text>Conta corrente</text> 
          <TextInput
           style={styles.input}
-         placeholder="qual seu nome">
+         placeholder="numero da conta"></TextInput>
           
-           </TextInput>
-          <br></br>
-          <text>Conta</text> 
-           <TextInput
-           style={styles.input}                                    
-          placeholder="Conta bancária">
-          </TextInput>
-           <br></br>
-           <text>E-mail</text> 
-           <TextInput
-           style={styles.input}                                    
-           placeholder="E-mail">
-          </TextInput>
-           <br></br>
-           <text>Senha</text> 
-          <TextInput
-            style={styles.input}                                    
-           placeholder="Senha">
-         </TextInput>
-         <text>Telefone</text> 
-          <TextInput
-            style={styles.input}                                    
-           placeholder="telefone">
-         </TextInput>
+          <View style={{justifyContent:'center'}}/>
+          <text>
+            selecione conta</text> 
+          <Picker 
+          selectedValue={conta}
+          onValueChange={handleContaChange}
+          style={{ width:300}}
+
+          >
+          {contas.map((c) => (
+          <Picker.Item key={c} label={c.toString()} value={c.toString()} />
+          ))}
+          </Picker>
+<br></br>
+          <View style={{
+                 flexDirection: 'row',
+                 
+                }}>
+<Picker style={{height:40, padding:5, margin:10}}
+      selectedValue={number}
+      onValueChange={handleNumberChange}
+    >
+      <Picker.Item label="$" value="$" />
+      <Picker.Item label="R$" value="R$" />
+      
+    </Picker>
+
+    <TextInput
+          style={styles.input}
+         placeholder="Valor"></TextInput>
+                  </View>
+</View>
          <text>
-            Endereço</text> 
+            Mensagem</text> 
           <TextInput
             style={styles.input2}                                    
-           placeholder="endereço">
+           placeholder="mensagem">
          </TextInput>
           
            <Text style={styles.text}> blablabla whiskas sache</Text>
@@ -78,7 +119,7 @@ export function TelaJ({navigation})
               justifyContent:'center',}}>   
           
           
-          <Button title="Salvar" onPress={() => navigation.navigate('TelaE')}></Button>
+          <Button title="Salvar" onPress={() => navigation.navigate('TelaB')}></Button>
                                               
         </View>
                                                              
@@ -97,7 +138,7 @@ export function TelaJ({navigation})
        },
     
         imagem: {
-        width: 100,
+        width: 200,
         height: 100,
         },
     

@@ -21,16 +21,16 @@ export default function App() {
     <NavigationContainer>
       
       <Stack.Navigator initialRouteName='TelaB'>
-        <Stack.Screen name='TelaA'  component={TelaA} options={{ headerShown: true }}/>
-        <Stack.Screen name='TelaB' component={TelaB} options={{ headerShown: true }}/>
-        <Stack.Screen name='TelaC' component={TelaC} options={{ headerShown: true }} />
-        <Stack.Screen name='TelaD' component={TelaD} options={{ headerShown: true }}/>
-        <Stack.Screen name='TelaE' component={TelaE} options={{ headerShown: true }}/>
-        <Stack.Screen name='TelaF' component={TelaF} options={{ headerShown: true }}/>
-        <Stack.Screen name='TelaG' component={TelaG} options={{ headerShown: true }}/>
-        <Stack.Screen name='TelaH' component={TelaH} options={{ headerShown: true }}/>
-        <Stack.Screen name='TelaI' component={TelaI} options={{ headerShown: true }}/>
-        <Stack.Screen name='TelaJ' component={TelaJ} options={{ headerShown: true }}/>
+        <Stack.Screen name='TelaA'  component={TelaA} options={{ headerShown: false }}/>
+        <Stack.Screen name='TelaB' component={TelaB} options={{ headerShown: false }}/>
+        <Stack.Screen name='TelaC' component={TelaC} options={{ headerShown: false }} />
+        <Stack.Screen name='TelaD' component={TelaD} options={{ headerShown: false }}/>
+        <Stack.Screen name='TelaE' component={TelaE} options={{ headerShown: false }}/>
+        <Stack.Screen name='TelaF' component={TelaF} options={{ headerShown: false }}/>
+        <Stack.Screen name='TelaG' component={TelaG} options={{ headerShown: false }}/>
+        <Stack.Screen name='TelaH' component={TelaH} options={{ headerShown: false }}/>
+        <Stack.Screen name='TelaI' component={TelaI} options={{ headerShown: false }}/>
+        <Stack.Screen name='TelaJ' component={TelaJ} options={{ headerShown: false }}/>
       </Stack.Navigator>
       
     </NavigationContainer>

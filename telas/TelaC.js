@@ -103,6 +103,10 @@ export function TelaC({navigation}) {
                                     <Link to="/TelaF"style={{color:'blue'}}>Mais</Link>
                                     
     </View>
+    <View style={{alignSelf:'center'}}>
+                                    <Link to="/TelaB"style={{color:'blue'}}>Voltar</Link>
+                                    
+    </View>
 
          </View>
          );
