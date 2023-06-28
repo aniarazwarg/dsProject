@@ -1,7 +1,7 @@
 import { View, Button, Image, StyleSheet, Text, TextInput , CheckBox} from "react-native";
 import React, {useState} from 'react';
 
-export function TelaD({navigation}) 
+export function TelaJ({navigation}) 
 {const [isSelected, setSelection] = useState(false);
     return (
     <View style={{JustifyContent:'center'}}> 

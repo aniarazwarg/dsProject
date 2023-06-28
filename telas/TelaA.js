@@ -1,5 +1,6 @@
 import { View, Button, Image, StyleSheet, Text, TextInput , CheckBox} from "react-native";
 import React, {useState} from 'react';
+import { Link } from '@react-navigation/native';
 
 export function TelaA({navigation}) 
 {const [isSelected, setSelection] = useState(false);
@@ -65,13 +66,18 @@ export function TelaA({navigation})
         <View style={{flexDirection: 'row',
               justifyContent:'center',}}>   
           
-          <Button title="Login" onPress={() => navigation.navigate('TelaD')}></Button>
+          <Button title="Cadastrar" onPress={() => navigation.navigate('TelaC')}></Button>
           <View style={{ width: 10 }} />
           <Text style={styles.text2}>OR</Text>
           <View style={{ width: 10 }} />
-          <Button title="Login" onPress={() => navigation.navigate('TelaB')}></Button>
+          <Button title="Cancelar" onPress={() => navigation.navigate('TelaB')}></Button>
+          
                                               
         </View>
+        <View style={{alignSelf:'center'}}>
+                                    
+                                    <text>Ja está cadastrado? acesso?<Link to="/TelaB"style={{color:'blue'}}>Login</Link></text>
+    </View>
                                                              
     </View>
       );

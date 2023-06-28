@@ -214,7 +214,7 @@ style={{ flex: 1 }}
               justifyContent:'center',}}>   
           
           
-          <Button title="Voltar" onPress={() => navigation.navigate('TelaB')}></Button>
+          <Button title="Adicionar Cartão" onPress={() => navigation.navigate('TelaB')}></Button>
                                               
         </View>
                                                              

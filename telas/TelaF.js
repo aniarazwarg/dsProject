@@ -6,7 +6,7 @@ import { Link } from '@react-navigation/native';
 
 
 
-export function TelaC({navigation}) {
+export function TelaF({navigation}) {
     return (
         
       <View style={{JustifyContent:'center'}}>
@@ -15,22 +15,29 @@ export function TelaC({navigation}) {
                  flexDirection: 'row',
                  height: 70,
                   padding: 40,
-                }}>
-                 <Text style={styles.text}>Welcome!</Text> */}
+                }}> */}
+                 <Text style={styles.text}>Transações</Text> 
+                 <View style={{flexDirection: 'row'
+              }}>
+                    <Button   title="Pagamentos" onPress={() => navigation.navigate('TelaG')}></Button>
+                    <Button   title="Câmbio" onPress={() => navigation.navigate('TelaH')}></Button>
+
                 {/* </View> */}
+                 
+                </View>
                             <br></br>
                             
-                            <Image style={styles.imagem} source={require('../assets/user.png')}/>
+                            {/* <Image style={styles.imagem} source={require('../assets/user.png')}/>
                            <Text style={styles.text}>NOME</Text>
                            <Text style={styles.text1}>email@email.com</Text>
-                           <br></br>
-                           <View style={styles.Retangulo}>
+                           <br></br> */}
+                           {/* <View style={styles.Retangulo}>
                            
                             <text>Saldo</text>
                             <text style={{fontSize:'X-large' }}>R$ 10</text>
-                            <Button   title="transfer" onPress={() => navigation.navigate('TelaI')}></Button>
+                            <Button   title="transfer" onPress={() => navigation.navigate('TelaA')}></Button>
 
-                           </View>
+                           </View> */}
 
                            
 
@@ -125,22 +132,23 @@ export function TelaC({navigation}) {
         borderRadius:40,
       },
 
-     Retangulo:{
-      padding:15,
-      alignItems:'center',
-      width:240,
-      height:100,
-      backgroundColor: 'white',
-      borderRadius:20,
-     },
+    //  Retangulo:{
+    //   padding:15,
+    //   alignItems:'center',
+    //   width:240,
+    //   height:100,
+    //   backgroundColor: 'white',
+    //   borderRadius:20,
+    //  },
      container: {
+        
       alignItems:'center',
-      paddingTop: 10,
-      paddingBottom : 20,
+      paddingTop: 20,
+      
       backgroundColor: 'blue',
       textShadowColor: 'white',
-      JustifyContent:'center',
-      alignItems:'center',
+    //   JustifyContent:'space-between',
+    //   alignItems:'center'
     },
     imagem: {
     width: 100,
@@ -148,6 +156,8 @@ export function TelaC({navigation}) {
     },
     
     text: {
+        marginBottom:40,
+        fontSize:'X-Large',
         color:'white',
     },
 
@@ -163,8 +173,9 @@ export function TelaC({navigation}) {
              
         height: 40,
         width:100,
-        margin: 12,
+        // margin: 12,
         padding: 10,
+        
       }
     });
 

@@ -2,7 +2,7 @@ import React from "react";
 import { View, Button, Image, StyleSheet, Text, TextInput, } from "react-native";
 import { Link } from '@react-navigation/native';
 
-export function TelaB({navigation}) {
+export function TelaI({navigation}) {
     return (
         
       <View style={{JustifyContent:'center'}}>
@@ -12,39 +12,35 @@ export function TelaB({navigation}) {
                  height: 70,
                   padding: 40,
                 }}>
-                 <Text style={styles.text}>Welcome!</Text>
+                 <Text style={styles.text}>Escaneie este Qr code!</Text>
                 </View>
                             <br></br>
-                            <Image style={styles.imagem} source={require('../assets/img1.png')}/>
+                            <Image style={styles.imagem} source={require('../assets/qr.png')}/>
                            
-
+                            <Text style={styles.text}>SEU NOME</Text>
+                            <Text style={styles.text}>E-mail@email.com</Text>
                          </View>
                         
                         <View>       
-                                    <TextInput
-                                     style={styles.input}
-                                    placeholder="E-mail">
+                        <View style={{alignSelf:'center'}}>
+                 <Text >Tente com o codigo de barras</Text>
+                </View>
+                <View style={{alignSelf:'center'}}>
+                            <Image style={{height:50,width:100}} source={require('../assets/barras.png')}/>
+                           
+                            <Text style={styles.text}>SEU NOME</Text>
+                            <Text style={styles.text}>E-mail@email.com</Text>
+                         </View>
+                         </View>
+                         
 
-                                    </TextInput>
-                                    <br></br>
+                        
 
-                                    <TextInput
-                                     style={styles.input}                                    
-                                    placeholder="Senha">
-
-                                    </TextInput>
-
-                        </View>
-
-                                    <View style={{alignItems:'center'}}>   
-
-                                    <Button title="Login" onPress={() => navigation.navigate('TelaC')}></Button>
-                                    
-                                    </View>
+                                   
 
                                     <View style={{alignSelf:'center'}}>
-                                    <Link to="/TelaD"style={{color:'blue'}}>Esqueci a senha.</Link>
-                                    <text>Novo acesso?<Link to="/TelaA"style={{color:'blue'}}>Cadastre-se</Link></text>
+                                   
+                                    <text>Não pode escanear?<Link to="/TelaJ"style={{color:'blue'}}>digite as informaçoes da conta.</Link></text>
     </View>
 
          </View>
@@ -57,7 +53,7 @@ export function TelaB({navigation}) {
 
  const styles = StyleSheet.create({
      container: {
-      paddingTop: 50,
+      padding: 50,
       backgroundColor: 'blue',
       textShadowColor: 'white',
       JustifyContent:'center',
