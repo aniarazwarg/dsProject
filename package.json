@@ -10,7 +10,7 @@
     "web": "expo start --web",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build-prod": "parcel build src/index.html" 
+    "build-prod": "build src/index.html" 
   },
   "dependencies": {
     "@expo/webpack-config": "^18.0.1",
